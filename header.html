@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Header</title>
+    <style>
+        /* Reset and base styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121920;
+            color: #f0f3f5;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 40px;
+            background: linear-gradient(90deg, #283e51, #1c2938);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+            border-radius: 0 0 15px 15px;
+            user-select: none;
+        }
+
+        .left-nav, .right-nav {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #f0ad4e;
+            letter-spacing: 2px;
+            user-select: text;
+        }
+
+        a {
+            text-decoration: none;
+            color: #aeb8c1;
+            font-weight: 600;
+            padding: 10px 18px;
+            border-radius: 8px;
+            transition: background-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
+            display: inline-block;
+        }
+
+        a:hover {
+            background-color: #5dade2;
+            color: #ffffff;
+            box-shadow: 0 8px 20px rgba(93, 173, 226, 0.6);
+        }
+
+        .btn-register {
+            background-color: #5cb85c;
+            color: white;
+            font-weight: 700;
+            box-shadow: 0 6px 15px rgba(92, 184, 92, 0.7);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn-register:hover {
+            background-color: #4cae4c;
+            box-shadow: 0 8px 24px rgba(76, 174, 76, 0.9);
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                padding: 20px;
+                gap: 15px;
+                border-radius: 0 0 12px 12px;
+            }
+
+            .left-nav, .right-nav {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .title {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-container" role="navigation" aria-label="Primary Navigation">
+        <div class="left-nav">
+            <span class="title">NoticeBoard System</span>
+            <a href="main.php" target="main_content" aria-label="Home">Home</a>
+            <a href="login.php" target="main_content" aria-label="Login">Login</a>
+        </div>
+        <div class="right-nav">
+            <a href="main.php?page=notices" target="main_content" aria-label="Current Notices">Current Notices</a>
+            <a href="main.php?page=about" target="main_content" aria-label="About Us">About Us</a>
+            <a href="main.php?page=contact" target="main_content" aria-label="Contact Us">Contact Us</a>
+            <a href="main.php?page=help" target="main_content" aria-label="Help">Help</a>
+            <a href="register.php" target="main_content" class="btn-register" aria-label="Register">Register</a>
+        </div>
+    </nav>
+</body>
+</html>
